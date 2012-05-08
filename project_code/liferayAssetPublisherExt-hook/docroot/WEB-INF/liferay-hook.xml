@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.1.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_1_0.dtd">
+
+<hook>
+	<!-- Extend language settings -->
+	<language-properties>Language_en.properties</language-properties>
+	<language-properties>Language_nl.properties</language-properties>
+
+	<!-- Override the Asset Publisher JSPs. -->
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	
+	
+	<!-- Override the action that fetch the assets. -->
+	<service>
+		<service-type>com.liferay.portlet.asset.service.AssetEntryService</service-type>
+		<service-impl>com.rcs.liferay.service.hook.CustomAssetEntryServiceImpl</service-impl>
+	</service>
+</hook>
